@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ITResource xmlns="http://modeliosoft/xsddesigner/a22bd60b-ee3d-425c-8618-beb6a854051a/ITResource.xsd" ID="MSPL_920464b5-b846-45bf-b380-33ac947cb7bf">
+    <configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="RuleSetConfiguration">
+        <capability>
+            <Name>Filtering_L7</Name>
+        </capability>
+        <capability>
+            <Name>Timing</Name>
+        </capability>
+        <defaultAction xsi:type="FilteringAction">
+            <FilteringActionType>ALLOW</FilteringActionType>
+        </defaultAction>
+        <configurationRule>
+            <configurationRuleAction xsi:type="FilteringAction">
+                <FilteringActionType>DENY</FilteringActionType>
+            </configurationRuleAction>
+            <configurationCondition xsi:type="FilteringConfigurationCondition">
+                <isCNF>false</isCNF>
+                <packetFilterCondition>
+                    <SourceAddress>0.0.0.0/0.0.0.0,</SourceAddress>
+                </packetFilterCondition>
+                <applicationLayerCondition>
+                    <URL>www.pokerstars.it/,www.888poker.com,www.bwin.com,</URL>
+                </applicationLayerCondition>
+            </configurationCondition>
+            <externalData xsi:type="Priority">
+                <value>0</value>
+            </externalData>
+            <Name>Rule0</Name>
+            <isCNF>false</isCNF>
+            <HSPL HSPL_id="hspl48" HSPL_text="alice no_authorise_access internet_traffic gambling,  "/>
+        </configurationRule>
+        <configurationRule>
+            <configurationRuleAction xsi:type="FilteringAction">
+                <FilteringActionType>DENY</FilteringActionType>
+            </configurationRuleAction>
+            <configurationCondition xsi:type="FilteringConfigurationCondition">
+                <isCNF>false</isCNF>
+                <packetFilterCondition>
+                    <SourceAddress>0.0.0.0/0.0.0.0,</SourceAddress>
+                </packetFilterCondition>
+                <timeCondition>
+                    <Weekday></Weekday>
+                    <Time>15:00-18:00,</Time>
+                </timeCondition>
+                <applicationLayerCondition>
+                    <URL>www.youtube.com,</URL>
+                </applicationLayerCondition>
+            </configurationCondition>
+            <externalData xsi:type="Priority">
+                <value>1</value>
+            </externalData>
+            <Name>Rule1</Name>
+            <isCNF>false</isCNF>
+            <HSPL HSPL_id="hspl55" HSPL_text="alice no_authorise_access internet_traffic on www.youtube.com, 
+            in ({ }{ 08:00:00-13:00:00, } UTC)in ({ }{ 15:00:00-18:00:00, } UTC)"/>
+        </configurationRule>
+        <configurationRule>
+            <configurationRuleAction xsi:type="FilteringAction">
+                <FilteringActionType>DENY</FilteringActionType>
+            </configurationRuleAction>
+            <configurationCondition xsi:type="FilteringConfigurationCondition">
+                <isCNF>false</isCNF>
+                <packetFilterCondition>
+                    <SourceAddress>0.0.0.0/0.0.0.0,</SourceAddress>
+                </packetFilterCondition>
+                <timeCondition>
+                    <Weekday></Weekday>
+                    <Time>08:00-13:00,</Time>
+                </timeCondition>
+                <applicationLayerCondition>
+                    <URL>www.youtube.com,</URL>
+                </applicationLayerCondition>
+            </configurationCondition>
+            <externalData xsi:type="Priority">
+                <value>2</value>
+            </externalData>
+            <Name>Rule2</Name>
+            <isCNF>false</isCNF>
+            <HSPL HSPL_id="hspl55" HSPL_text="alice no_authorise_access internet_traffic on www.youtube.com, 
+            in ({ }{ 08:00:00-13:00:00, } UTC)in ({ }{ 15:00:00-18:00:00, } UTC)"/>
+        </configurationRule>
+        <resolutionStrategy xsi:type="FMR"/>
+        <Name>MSPL_920464b5-b846-45bf-b380-33ac947cb7bf</Name>
+    </configuration>
+</ITResource>

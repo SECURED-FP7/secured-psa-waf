@@ -1,0 +1,26 @@
+{
+        "name": "user_profile_type",
+        "user_token": "",
+        "profile_type": "AD",
+
+        "PSASet": [
+
+                {
+                        "id": "squid",
+                        "security_controls": [
+
+                                {
+                                        "imgName": "squid.img",
+                                        "conf_id":"squid_user7"
+                                }
+
+                        ] 
+
+                }
+
+        ], 
+
+        "ingress_flow": ["squid"],
+        "egress_flow": ["squid"]
+
+}

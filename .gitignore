@@ -1,0 +1,9 @@
+*.pyc
+*.log
+*.req
+*.state
+*.sublime*
+tmp
+*.original
+*.directory
+*.kate-swp
